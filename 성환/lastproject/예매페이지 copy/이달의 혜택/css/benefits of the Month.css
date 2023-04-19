@@ -1,0 +1,197 @@
+.rap {
+    max-width: 1268px;
+    padding: 0 1.4rem;
+    margin-top: .3rem;
+  }
+  
+  .dateHead {
+    margin-bottom: .4rem;
+  }
+  
+  .dateHead div {
+    background: #fff;
+    color: #999999;
+    text-align: center;
+  }
+  
+  .grid1,.grid2 {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 5px;
+  }
+  
+  .grid1 div {
+    font-family: "Apple SD Gothic Neo";
+    font-weight: 700;
+    padding: .6rem;
+    font-size: 1.2rem;
+    /* cursor: pointer; */
+  }
+
+  .grid2 div {
+    display: flex;
+    justify-content: center;
+    font-size: .9rem;
+    cursor: pointer;
+    flex-direction: column;
+  }
+  
+  .dateBoard div {
+    color: #222;
+    font-weight: bold;
+    min-height: 6rem;
+    padding: .6rem .8rem;
+    border-radius: .6rem;
+    /* border: 1px solid #eee; */
+  }
+  
+  .noColor {
+    background: #eee;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+  
+  .btn {
+   display: block;
+   width: 20px;
+   height: 20px;
+   border: 3px solid #000;
+   border-width: 3px 3px 0 0;
+   cursor: pointer;
+  }
+  
+  .prevDay {
+    transform: rotate(-135deg);
+  }
+  
+  .nextDay {
+    transform: rotate(45deg);
+  }
+  
+  .dateBoard div p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin-top: 1rem;
+  }
+  
+  /* ------------- */
+  
+  * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;  
+  }
+
+  /* 달력 이미지  오늘 + 공휴일*/
+  .today{/* 오늘 */
+    background-image: url('../img/오늘.png');
+    background-size: 8vw;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .newYearSDay{/* 신정 */
+    background-image: url('../img/신정.png');
+    background-size: 8vw;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .seollal{/* 설날 */
+    background-image: url('../img/설날.png');
+    background-size: 8vw;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .samiljeol{/* 삼일절 */
+    background-image: url('../img/삼일절.png');
+    background-size: 8vw;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .childrenSDay{/* 어린이날 */
+    background-image: url('../img/어린이날.png');
+    background-size: 8vw;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .buddhaSBirthday{/* 석가탄신일 */
+    background-image: url('../img/석가탄신일.png');
+    background-size: 8vw;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .memorialDay{/* 현충일 */
+    background-image: url('../img/현충일.png');
+    background-size: 8vw;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .nationalLiberationDay{/* 광복절 */
+    background-image: url('../img/광복절.png');
+    background-size: 8vw;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .chuseok{/* 추석 */
+    background-image: url('../img/추석.png');
+    background-size: 8vw;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .theNationalFoundationDayOfKorea{/* 개천절 */
+    background-image: url('../img/개천절.png');
+    background-size: 8vw;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .hangulProclamationDay{/* 한글날 */
+    background-image: url('../img/한글날.png');
+    background-size: 8vw;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .christmas{/* 크리스마스 */
+    background-image: url('../img/크리스마스.png');
+    background-size: 8vw;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .toMonth{
+    width: 1268px;
+    height: 88px;
+    margin: 0 auto;
+    background: #F0F3FF;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 93px;
+    margin-bottom: 93px;
+    align-items: center;
+}

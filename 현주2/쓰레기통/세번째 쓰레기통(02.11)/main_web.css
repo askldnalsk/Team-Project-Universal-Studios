@@ -1,0 +1,949 @@
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 100;
+    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 300;
+    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
+    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
+    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 900;
+    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.otf) format('opentype');
+}
+
+@font-face {
+    font-family: "Apple SD Gothic Neo";
+    src: url("../fonts/AppleSDGothicNeoR.woff2") format("woff2"), url("../fonts/AppleSDGothicNeoR.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Apple SD Gothic Neo";
+    src: url("../fonts/AppleSDGothicNeoM.woff2") format("woff2"), url("../fonts/AppleSDGothicNeoM.woff") format("woff");
+    font-weight: 500;
+    font-style: medium;
+}
+
+@font-face {
+    font-family: "Apple SD Gothic Neo";
+    src: url("../fonts/AppleSDGothicNeoSB.woff2") format("woff2"), url("../fonts/AppleSDGothicNeoSB.woff") format("woff");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Apple SD Gothic Neo";
+    src: url("../fonts/AppleSDGothicNeoB.woff2") format("woff2"), url("../fonts/AppleSDGothicNeoB.woff") format("woff");
+    font-weight: 700;
+    font-style: bold;
+    unicode-range: U+0041-005A, U+0061-007A;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR';
+}
+
+@media (min-width:1025px) {
+
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        scroll-snap-type: y mandatory;
+    }
+
+    /* 헤더 */
+    .logo {
+        margin: 13px 0px 0px 3.9063vw;
+    }
+
+    .top_menu {
+        color: white;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .menu_bar {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .right_menu {
+        color: white;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-right: 60px;
+    }
+
+    .menu_icon {
+        margin: 0 0.9375vw;
+        cursor: pointer;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 100;
+    }
+
+
+
+
+    /* 풀메뉴 드롭다운 */
+    li {
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+    }
+    .top_menu {
+        width: 100vw;
+        overflow: hidden;
+    }
+
+    .top_menu a {
+        color: #fff;
+    }
+
+    .menu_bar_submenu {
+        height: 0;
+        margin-top: 40px;
+    }
+
+    .menu_bar_submenu li {
+        line-height: 20px;
+        font-size: 18px;
+    }
+
+    .menu_bar_submenu li a {
+        color: #2f2f2f;
+    }
+
+    .top_menu:hover {
+        background-color: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(20px);
+        transition-duration: 0.5s;
+        height: 385px;
+        box-shadow: #286ce13d 0px 1px 30px 1px;
+    }
+
+    /*유니버셜 로고 흰색에서 회색으로 변경*/
+    .logo_gray {
+        display: none;
+        cursor: pointer;
+    }
+
+    .top_menu:hover .logo_white {
+        display: none !important;
+    }
+
+    .top_menu:hover .logo_gray {
+        display: inline-block !important;
+    }
+
+    /*상단 오른쪽 아이콘 흰색에서 회색으로 변경*/
+    .search_icon_gray {
+        display: none;
+    }
+
+    .ticket_icon_gray {
+        display: none;
+    }
+
+    .user_icon_gray {
+        display: none;
+    }
+
+    .top_menu:hover .search_icon_white,
+    .top_menu:hover .ticket_icon_white,
+    .top_menu:hover .user_icon_white {
+        display: none !important;
+    }
+
+    .top_menu:hover .search_icon_gray,
+    .top_menu:hover .ticket_icon_gray,
+    .top_menu:hover .user_icon_gray {
+        display: inline-block !important;
+    }
+
+
+    .top_menu:hover .menu_bar_submenu {
+        height: 250px;
+        transition-duration: 0.5s;
+    }
+
+    .top_menu:hover .main_menu_container>li>a {
+        color: #2f2f2f;
+        font-weight: 800;
+    }
+
+    .top_menu:hover .menu_icon {
+        color: #2f2f2f;
+    }
+
+    .main_menu_container {
+        width: 902px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        height: 90px;
+    }
+
+    .main_menu_container li {
+        margin-top: 30px;
+    }
+
+    .menu_bar_submenu>li>a:hover {
+        color: #286BE1;
+        transition-duration: 0.3s;
+    }
+
+    .right_menu {
+        height: 90px;
+    }
+
+    .three_bar{
+        display: none;
+    }
+
+
+
+    /* 사이드바 */
+    .guide_map_icon {
+        position: fixed;
+        bottom: 60px;
+        right: 0;
+        z-index: 999;
+        cursor: pointer;
+    }
+
+
+
+    /* 풀페이지 전체 */
+    /*
+    #main_fullPage{
+        overflow: auto;
+    }
+    */
+    .main_section {
+        width: 100%;
+        height: 100vh;
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
+    }
+
+    .full1 {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        /* height: 140vh; */
+        scroll-snap-align: end;
+        scroll-snap-stop: always;
+
+    }
+
+
+
+
+    .full2,
+    .full4 {
+        background-color: #f7f7f7;
+        display: grid;
+        grid-template-rows: 290px 1fr;
+        justify-content: center;
+    }
+
+    .full3 {
+        background-color: #EEF5FB;
+        display: grid;
+        grid-template-rows: 290px 1fr;
+        justify-content: center;
+    }
+
+
+
+    .main_title {
+
+        font-size: 40px;
+        font-weight: 900;
+        color: #286BE1;
+
+        /* 원래 benefit 등 각 각 따로 줌 */
+        text-align: start;
+        position: relative;
+        top: 160px;
+        pointer-events: none;
+    }
+
+    .main_All {
+        pointer-events: none;
+        font-size: 15px;
+        color: #2f2f2f;
+    }
+
+    /* 공용
+    .main_section_top{
+        display: grid;
+        grid-template-columns: 19.1146vw 52.0833vw 104px 23.3854vw;
+
+        
+
+    }
+    */
+    .main_section_bottom {
+        margin: 0 auto;
+    }
+
+
+    /* 할인혜택 페이지 */
+    .benefit_title_total {
+        display: grid;
+        grid-template-columns: 19.1146vw 52.0833vw 104px 23.3854vw;
+    }
+
+
+    .benefit2 {
+        text-align: end;
+        position: relative;
+        top: 265px;
+    }
+
+    .benefit_content_total {
+        width: 1040px;
+        height: 520px;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .benefit3 {
+        width: 250px;
+        height: 250px;
+        background-color: #fff;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .benefit_text {
+        display: none;
+    }
+
+    .benefit3:hover {
+        background-color: #286BE1;
+        transition-duration: 0.8s;
+    }
+
+    .benefit3:hover img {
+        display: none;
+    }
+
+    .benefit3:hover .benefit_text {
+        display: inline-block;
+        font-size: 25px;
+        font-weight: 600;
+        color: #fff;
+        transition-duration: 0.3s;
+    }
+
+    .benefit_text p {
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+
+
+    /* 호버했을때 카드 뒤집기 */
+
+    .benefit_flip {
+        perspective: 1100px;
+    }
+
+    .benefit3 {
+
+        position: relative;
+        transition: .4s;
+        transform-style: preserve-3d;
+    }
+
+    .benefit_front,
+    .benefit_text {
+        position: absolute;
+        backface-visibility: hidden;
+    }
+
+    .benefit_front {
+        background: rgb(255, 255, 255);
+    }
+
+    /* 뒷면은 사전에 미리 뒤집기 */
+    .benefit_text {
+        transform: rotateY(180deg);
+    }
+
+    /* 호버 시 뒤집기 */
+    .benefit_flip:hover .benefit3 {
+        transform: rotateY(180deg);
+    }
+
+
+    /* 베스트 어트랙션 페이지 */
+    .attraction_title_total {
+        display: grid;
+        grid-template-columns: 19.1146vw 52.0833vw 180px 19.4271vw;
+    }
+
+
+    .attraction2 {
+        text-align: end;
+        position: relative;
+        top: 265px;
+    }
+
+    .attraction_content_total {
+        display: grid;
+        grid-template-columns: 21.0938vw 780px;
+        grid-template-rows: 515px;
+    }
+
+    .main_attraction_small {
+        width: 40.6250vw;
+        display: grid;
+        grid-template-columns: 250px 250px 250px;
+        grid-template-rows: 250px 250px;
+        align-content: space-between;
+        justify-content: space-between;
+    }
+
+    .main_attraction_big {
+        width: 20.3125vw;
+        height: 515px;
+        border-radius: 20px;
+        background-image: url(img/web/호버안내.png);
+    }
+
+    .att_b1 {
+        width: 20.3125vw;
+        height: 515px;
+        border-radius: 20px;
+
+        color: #fff;
+        text-align: center;
+        font-size: 20px;
+        position: relative;
+        padding-top: 120px;
+    }
+
+    .att_s {
+        cursor: pointer;
+    }
+
+    .att_s1 {
+        width: 250px;
+        height: 250px;
+        background-image: url(img/web/어트_해리포터\ 앤드\ 더\ 포비든\ 저니.png);
+
+        background-size: cover;
+        border-radius: 20px;
+        transition: 0.5s;
+    }
+
+    .att_s2 {
+        width: 250px;
+        height: 250px;
+        background-image: url(img/web/어트_쥬라기월드\ 더\ 라이드.png);
+        background-size: cover;
+        border-radius: 20px;
+        transition: 0.5s;
+    }
+
+    .att_s3 {
+        width: 250px;
+        height: 250px;
+        background-image: url(img/web/어트_\ 미니언\ 메이헴.png);
+        background-size: cover;
+        border-radius: 20px;
+        transition: 0.5s;
+    }
+
+    .att_s4 {
+        width: 250px;
+        height: 250px;
+        background-image: url(img/web/어트_프리즈\ 레이\ 슬라이더.png);
+        background-size: cover;
+        border-radius: 20px;
+        transition: 0.5s;
+    }
+
+    .att_s5 {
+        width: 250px;
+        height: 250px;
+        background-image: url(img/web/어트_마리오\ 카트\ 쿠파의\ 도전장.png);
+        background-size: cover;
+        border-radius: 20px;
+        transition: 0.5s;
+    }
+
+    .att_s6 {
+        width: 250px;
+        height: 250px;
+        background-image: url(img/web/어트_쥬라기월드\ 더\ 라이드.png);
+        background-size: cover;
+        border-radius: 20px;
+        transition: 0.5s;
+    }
+
+
+    /* 호버했을때 텍스트 */
+
+    .att_title {
+        font-size: 30px;
+        font-weight: 800;
+        text-align: center;
+        color: #2f2f2f;
+        margin-top: 50px;
+        line-height: 40px;
+        height: 80px;
+    
+    }
+
+    .att_content {
+        font-size: 14px;
+        font-weight: 500;
+        text-align: center;
+        color: #2f2f2f;
+        line-height: 20px;
+        margin-top: 10px;
+
+    }
+
+    .d-none {
+        display: none;
+    }
+
+
+    /*퍼레이드 페이지*/
+
+    .parade_title_total {
+        display: grid;
+        grid-template-columns: 19.1146vw 52.0833vw 180px 19.4271vw;
+    }
+
+    .parade2 {
+        text-align: end;
+        position: relative;
+        top: 265px;
+    }
+
+    .parade_content_total {
+        display: grid;
+        grid-template-columns: 100vw;
+        grid-template-rows: 26.0417vw 50px 1fr;
+        height: 650px;
+        align-items: end;
+    }
+
+/* 퍼레이드 호버했을떄 */
+.main_parade_item{
+    position: relative;
+}
+.parade_text_box{
+    width: 20.8333vw;
+    height: 8.8542vw;
+    text-align: center;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    z-index: 100;
+    position: absolute;
+    top: 115px;
+    left: 21px;
+    margin: 5.7292vw 0;
+}
+      
+.parade_text_title{
+    font-size: 1.5625vw;
+    font-weight: bolder;
+    color: #424242;
+}
+.parade_text_content{
+    font-size: 13px;
+    font-weight: 400;
+    color: #424242;
+}
+.parade_text_time{
+    font-size: 18px;
+    font-weight: 600;
+    color: #424242;
+    width: 75px;
+    height: 35px;
+    border: 2px solid #424242;
+    border-radius: 50px;
+    line-height: 30px;
+    margin-top: 25px;
+}
+
+.d-none div{
+    display: none;
+}
+
+.parade_text_end{
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 28.9063vw;
+    text-align: center;
+}
+
+
+
+    /* 푸터 */
+    .footer {
+        color: #fff;
+        width: 100%;
+        height: 230px;
+        background-color: #05091b;
+    }
+
+    .footer_section_total {
+        width: 946px;
+        height: 160px;
+
+        margin: 0px auto;
+
+        position: relative;
+        top: 40px;
+        display: grid;
+        grid-template-columns: 650px 162px;
+        justify-content: space-between;
+    }
+
+    .footer_content_top {
+        display: flex;
+    }
+
+    .footer_US_logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .footer_US_logo img {
+        height: 28px;
+        margin-right: 2px;
+    }
+
+    .footer_US_title {
+        font-size: 30px;
+        font-weight: 800;
+    }
+
+    .footer_content_right {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer_sns {
+        display: inline-block;
+    }
+
+    .footer_sns>i {
+        font-size: 24px;
+        margin-top: 31px;
+    }
+
+    .footer_content_left {
+        display: grid;
+        align-content: space-evenly;
+    }
+
+    .footer_use_content,
+    .footer_use_import {
+        margin-bottom: 5px;
+    }
+
+    .footer_use_content span,
+    .footer_copyright {
+        font-size: 15px;
+        margin-right: 29px;
+    }
+
+    .footer_use_import {
+        color: #286BE1;
+        font-weight: bold;
+    }
+
+    .footer_use_content,
+    .footer_content_right {
+        cursor: pointer;
+    }
+
+    /* 이용권티켓 */
+    .ticket__img {
+        position: absolute;
+        /*
+        transform: translate(-50%, 37%);
+        */
+        bottom: -380px;
+        width: 100%;
+        /* height: 100%; */
+        background-image: url('./img/web/이용권티켓_웹\,탭.png');
+
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        z-index: 10;
+        transition: 2s;
+    }
+
+    /* 이용권티켓 컨텐츠 */
+
+    .ticket_total_content {
+        display: grid;
+        grid-template-columns: 445px 215px;
+        justify-content: center;
+        align-items: end;
+        z-index: 99;
+        margin-top: 600px;
+
+    }
+
+    .ticket_left {
+        display: grid;
+        grid-template-rows: 100px 100px 100px;
+        justify-content: start;
+        justify-items: start;
+    }
+
+    .fast_buy_title {
+        margin-top: 20px;
+        font-size: 30px;
+        color: #444545;
+        font-weight: 900;
+    }
+
+    .fast_buy_content {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .fast_buy_content_1,
+    .fast_buy_content_2 {
+        display: grid;
+        grid-template-columns: 150px 150px 145px;
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+
+    .fast_buy_coc {
+        display: flex;
+    }
+
+    .fast_buy_coc div {
+        margin-right: 10px;
+        color: #444545;
+        font-size: 17px;
+        vertical-align: middle;
+    }
+
+    .fast_buy_coc .buy_icon {
+        color: #286BE1;
+        font-size: 20px;
+        vertical-align: middle;
+
+    }
+
+    .fast_buy_coc .arrow_small {
+        color: #444545;
+        font-size: 14px;
+    }
+
+    .ticket_buy_btn {
+        font-size: 17px;
+        width: 100px;
+        height: 40px;
+        border-radius: 50px;
+        background-color: #286BE1;
+        color: #fff;
+        text-align: center;
+        line-height: 40px;
+        margin-top: 10px;
+        margin-left: 315px;
+        cursor: pointer;
+    }
+
+    #ticket_now_time {
+        z-index: 100;
+        color: #444545;
+        font-size: 22px;
+        font-weight: 600;
+        text-align: center;
+        position: relative;
+        width: 320px;
+        height: 250px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: 18px;
+    }
+
+    /* 빠른구매 클릭했을때 */
+
+    .choice_none {
+        display: none;
+        cursor: pointer;
+    }
+
+    .ticket_buy_choice a {
+        color: #444545;
+        text-decoration: none;
+    }
+
+    .ticket_buy_choice {
+        cursor: pointer;
+    }
+
+
+    /* 성환초이 건듦 */
+    .csh__black {
+        color: #2f2f2f !important;
+    }
+    .earth_video {
+        min-width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: -999;
+    }
+
+    /* 애니메이션 - 펄스 */
+    @-webkit-keyframes pulse {
+        from {
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+        }
+        50% {
+            -webkit-transform: scale3d(1.05, 1.05, 1.05);
+            transform: scale3d(1.05, 1.05, 1.05);
+        }
+        to {
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+        }
+    }
+
+    @keyframes pulse {
+        from {
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+        }
+
+        50% {
+            -webkit-transform: scale3d(1.05, 1.05, 1.05);
+            transform: scale3d(1.05, 1.05, 1.05);
+        }
+
+        to {
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+        }
+    }
+
+    .animate__pulse {
+        -webkit-animation-name: pulse;
+        animation-name: pulse;
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+    }
+
+    .att_mouse_account {
+        animation-iteration-count: infinite;
+        text-shadow: 0px 0px 500px #fff;
+        margin: 0 30px;
+        white-space: normal;
+    }
+
+    /* 메인 영상 */
+    .full_video {
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none
+    }
+
+    .full_video iframe {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100vw;
+        height: 56.25vw;
+        min-height: 100vh;
+        min-width: 177.77vh;
+        transform: translate(-50%, -50%)
+    }
+
+    .usk_title_name {
+        font-size: 100px;
+        color: #fff;
+        font-weight: bolder;
+        z-index: 10;
+        position: relative;
+        text-align: center;
+        top: 40%;
+    }
+
+    .blue_effect {
+        width: 100vw;
+        height: 100vh;
+        z-index: 100px;
+        position: absolute;
+    }
+
+
+
+}
+
+.stop-scrolling {
+  /* height: 100%; */
+  overflow: hidden;
+}

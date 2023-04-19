@@ -1,0 +1,476 @@
+html,body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Noto Sans KR';
+    font-size: 14px;
+    line-height: 23px;
+    color: #666;
+}
+
+*{
+    margin: 0;
+    padding: 0; 
+    list-style: none;
+}
+
+
+table {
+    border-collapse: collapse;
+}
+
+table caption {
+    text-align: left;
+    display: none;
+}
+
+
+form,
+input,
+select,
+textarea,
+button {
+    font-family: 'Noto Sans KR';
+    font-size: 14px;
+    line-height: 23px;
+    color: #666;
+}
+
+button {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    outline-style: none;
+}
+
+input,
+select,
+textarea {
+    outline-style: none;
+    margin: 0;
+}
+
+img {
+    border: 0;
+}
+
+i,
+em,
+cite {
+    font-style: normal;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Content */
+#wrapCont {
+    position: relative;
+    min-width: 1250px;
+}
+
+.btnBox a {
+    width: 169px;
+    height: 59px;
+    background: #fe5730;
+    margin-left: 7px;
+    font-size: 16px;
+    line-height: 59px;
+    color: #fff;
+    text-align: center;
+    vertical-align: top;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.btnBox a:first-child {
+    background: #fff !important;
+    border: solid 1px #d8d8d8;
+    color: #000;
+}
+
+.btnBox.cb a {
+    background: #1b9bf0;
+}
+
+.btnBox.ym a {
+    background: #9855cd;
+}
+
+.btnBox.speed a {
+    background: #554fca;
+}
+
+/* 달력 */
+.dateCalBox {
+    position: relative;
+}
+
+.dateCalBox .ui-datepicker {
+    position: relative;
+    z-index: 1;
+    background: #fff;
+    border-radius: 30px 30px 10px 10px;
+    padding: 0 34px 53px 34px;
+    letter-spacing: 0;
+}
+
+.dateCalBox .ui-datepicker table {
+    width: 100%;
+}
+
+.dateCalBox .ui-datepicker table th {
+    padding-bottom: 10px;
+    font-size: 17px;
+}
+
+.dateCalBox .ui-datepicker table td {
+    font-family: 'Roboto';
+    font-size: 20px;
+    color: #000;
+    text-align: center;
+}
+
+.dateCalBox .ui-datepicker table td a {
+    position: relative;
+    z-index: 1;
+    padding: 16px 0 15px 0;
+    display: block;
+}
+
+.dateCalBox .ui-datepicker table td.ui-state-disabled {
+    color: #c9c9c9;
+}
+
+.dateCalBox .ui-datepicker-title {
+    font-family: 'Roboto';
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.dateCalBox .ui-datepicker-year {
+    margin-left: 1px;
+    display: inline-block;
+}
+
+.dateCalBox .ui-datepicker-month {
+    letter-spacing: 0.5px;
+}
+
+.dateCalBox .ui-datepicker-month i {
+    position: absolute;
+    top: 20px;
+    left: 47px;
+    font-size: 53px;
+    font-weight: 400;
+    line-height: 55px;
+    letter-spacing: -1px;
+    display: block;
+}
+
+.dateCalBox .ui-datepicker-header {
+    height: 90px;
+    background: #aaa;
+    border-radius: 10px 10px 0 0;
+    margin: 0 -34px 45px -34px;
+    padding: 50px 39px 0 0;
+    color: #fff;
+    text-align: right;
+    box-sizing: border-box;
+}
+
+.dateCalBox .ui-datepicker-prev,
+.dateCalBox .ui-datepicker-next {
+    position: absolute;
+    z-index: 10;
+    top: 250px;
+    width: 50px;
+    height: 53px;
+    background-image: url('https://reservation.everland.com/web/img/202003170001/mark_arrow_cal.png?ver=20210615');
+    background-repeat: no-repeat;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+    display: block;
+    overflow: hidden;
+}
+
+.dateCalBox .ui-datepicker-prev {
+    left: -54px;
+    background-position: left top;
+}
+
+.dateCalBox .ui-datepicker-next {
+    right: -54px;
+    background-position: right top;
+}
+
+.dateCalBox .ui-state-default {
+    padding: 16px 0 15px 0;
+    display: block;
+}
+
+.dateCalBox .ui-state-active {
+    color: #fff !important;
+}
+
+.dateCalBox .ui-state-active:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    background: #000;
+    border-radius: 100px;
+    margin: -25px 0 0 -25px;
+    display: block;
+    clear: both;
+}
+
+.dateCalBox .choice a {
+    color: #fff;
+}
+
+.dateCalBox .choice a:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    background: #ee2929;
+    border-radius: 100px;
+    margin: -25px 0 0 -25px;
+    display: block;
+    clear: both;
+}
+
+.dateCalBox .choice .ui-state-active:before {
+    background: #ee2929 !important;
+}
+
+.dateCalBox:before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -35px;
+    left: -55px;
+    right: -55px;
+    bottom: -85px;
+    background: url('https://reservation.everland.com/web/img/202003170001/bg_calback.png') center bottom no-repeat;
+}
+
+.dateCalBox.el .ui-datepicker-header,
+.dateCalBox.el .ui-state-active:before {
+    background: #fe5730 !important;
+}
+
+.dateCalBox.el .ui-datepicker table td.able a {
+    color: #fe5730
+}
+
+/* 방문일 선택 */
+.dateChoice {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 115px 0 250px 0;
+}
+
+.dateChoice h3 {
+    height: 40px;
+    font-size: 30px;
+    line-height: 35px;
+    color: #000;
+    letter-spacing: -1px;
+}
+
+.dateChoice:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.dateChoice .infoBox {
+    position: relative;
+    float: left;
+    width: 450px;
+    min-height: 460px;
+}
+
+.dateChoice .infoBox .intro {
+    padding-top: 60px;
+    font-size: 40px;
+    font-weight: 100;
+    color: #000;
+    line-height: 50px;
+    display: block;
+}
+
+.dateChoice .chkAfter {
+    padding-top: 15px;
+}
+
+.dateChoice .chkAfter dt {
+    margin: 29px 0 0 0;
+    font-size: 16px;
+}
+
+.dateChoice .chkAfter dt:before {
+    content: '';
+    width: 25px;
+    height: 30px;
+    border-top: solid 1px #000;
+    display: block;
+}
+
+.dateChoice .chkAfter dt:first-child:before {
+    display: none;
+}
+
+.dateChoice .chkAfter dd,
+.dateChoice .chkAfter dd b {
+    font-family: 'Roboto';
+    font-size: 30px;
+    font-weight: 500;
+    color: #000;
+    line-height: 45px;
+    letter-spacing: -1px;
+}
+
+.dateChoice .chkAfter dd i {
+    margin: -2px 0 0 4px;
+    font-family: 'Noto Sans KR', 'Nanum Gothic', '나눔고딕', 'Malgun Gothic', '맑은고딕';
+    font-size: 16px;
+    font-weight: 400;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.dateChoice .chkAfter dd a {
+    height: 27px;
+    border: solid 1px #000;
+    border-radius: 30px;
+    margin: 0 0 12px 19px;
+    padding: 0 15px;
+    font-family: 'Noto Sans KR', 'Nanum Gothic', '나눔고딕', 'Malgun Gothic', '맑은고딕';
+    font-size: 13px;
+    line-height: 26px;
+    letter-spacing: 0;
+    vertical-align: bottom;
+    display: inline-block;
+}
+
+.dateChoice .chkAfter .oprTime {
+    font-size: 16px;
+}
+
+.dateChoice .chkAfter .oprTime b {
+    margin-bottom: 5px;
+    vertical-align: bottom;
+    display: inline-block;
+}
+
+.dateChoice .chkAfter.el dd a {
+    border-color: #fe5730;
+    color: #fe5730;
+}
+
+.dateChoice .chkAfter.cb dd a {
+    border-color: #1b9bf0;
+    color: #1b9bf0;
+}
+
+.dateChoice .chkAfter.speed dd a {
+    border-color: #554fca;
+    color: #554fca;
+}
+
+
+.dateChoice .dateCalBox {
+    position: relative;
+    z-index: 10;
+    float: right;
+    width: 480px;
+    margin-right: 90px;
+}
+
+.dateChoice .btnBox {
+    float: left;
+    width: 450px;
+    margin-top: 6px;
+}
+
+.dateChoice .btnBox a {
+    margin: 0 7px 0 0;
+}
+
+
+.legend {
+    position: absolute;
+    width: 100%;
+    bottom: -78px;
+    font-size: 15px;
+    text-align: center;
+    letter-spacing: -0.05em;
+}
+
+.legend li {
+    position: relative;
+    display: inline-block;
+    padding-left: 22px;
+    margin: 0 10px;
+}
+
+.legend li::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.legend li.off {
+    color: #262626;
+}
+
+.legend li.disabled {
+    color: #898989;
+}
+
+.legend.el li.able {
+    color: #fe5730;
+}
+
+.legend.cb li.able {
+    color: #1b9bf0;
+}
+
+.legend.speed li.able {
+    color: #554fca;
+}
+
+.legend.ym li.able {
+    color: #9855cd;
+}

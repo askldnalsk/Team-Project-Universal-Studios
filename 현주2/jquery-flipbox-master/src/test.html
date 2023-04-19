@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Patua+One">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/krebszattila/jquery-flipbox/master/src/jquery.flipbox.css">
+
+</head>
+<body>
+
+    <div class="item">
+        <div class="box" id="box2">
+            <div class="side side1">1</div>
+            <div class="side side2">2</div>
+            <div class="side side3">3</div>
+            <div class="side side4">4</div>
+            <div class="side side5">5</div>
+
+        </div>
+        <button class="prev reverse">&#9650; prev</button>
+        <button class="prev">&#9660; prev</button>
+        <button class="next reverse">&#9650; next</button>
+        <button class="next">&#9660; next</button>
+        <br>
+        <button class="jump reverse" data-index="0">&#9650; 1</button>
+        <button class="jump reverse" data-index="1">&#9650; 2</button>
+        <button class="jump reverse" data-index="2">&#9650; 3</button>
+        <button class="jump reverse" data-index="3">&#9650; 4</button>
+        <button class="jump reverse" data-index="4">&#9650; 5</button>
+        <button class="jump reverse" data-index="5">&#9650; 6</button>
+        <button class="jump reverse" data-index="6">&#9650; 7</button>
+        <button class="jump reverse" data-index="7">&#9650; 8</button>
+        <br>
+        <button class="jump" data-index="0">&#9660; 1</button>
+        <button class="jump" data-index="1">&#9660; 2</button>
+        <button class="jump" data-index="2">&#9660; 3</button>
+        <button class="jump" data-index="3">&#9660; 4</button>
+        <button class="jump" data-index="4">&#9660; 5</button>
+        <button class="jump" data-index="5">&#9660; 6</button>
+        <button class="jump" data-index="6">&#9660; 7</button>
+        <button class="jump" data-index="7">&#9660; 8</button>
+    </div>
+    
+    
+   
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.rawgit.com/krebszattila/jquery-flipbox/master/src/jquery.flipbox.js"></script>
+
+    <script>
+        // Horizontal
+        $('#box1').flipbox({
+            vertical: false
+        });
+
+        // Vertical
+        $('#box2').flipbox({
+            vertical: true
+        });
+
+        // Speed & Easing
+        $('#box3').flipbox({
+            vertical: false
+        });
+
+        // Autoplay
+        $('#box4').flipbox({
+            vertical: false,
+            autoplay: true,
+            autoplayReverse: false,
+            autoplayWaitDuration: 2000,
+            autoplayPauseOnHover: true
+        });
+
+        // Mouse Enter Flip
+        $('.grid .box').each(function(index) {
+            $(this).flipbox({
+                vertical: Math.random() * 2 < 1
+            });
+        }).mouseenter(function() {
+            $(this).flipbox('next', Math.random() * 2 < 1);
+        });
+
+        // Dynamic content
+        $('#box5').flipbox();
+        var index = 0;
+        var lorem = 'lorem ipsum dolor sit amet'.split(' ');
+        setInterval(function() {
+            $('#box5').flipbox('replace', '<div class="side side1">' + (lorem[index % lorem.length]) + '</div>', 0);
+            $('#box5').flipbox('replace', '<div class="side side2">' + (lorem[index % lorem.length]) + '</div>', 1);
+            index++;
+            if (index % lorem.length === 0) {
+                $('#box5').flipbox('next');
+            }
+        }, 500);
+
+        // Clock
+        $('.clock .box').flipbox({
+            vertical: true
+        });
+        function updateClock() {
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+            $('.clock .box:eq(0)').flipbox('jump', Math.floor(hours / 10));
+            $('.clock .box:eq(1)').flipbox('jump', hours % 10);
+            $('.clock .box:eq(2)').flipbox('jump', Math.floor(minutes / 10));
+            $('.clock .box:eq(3)').flipbox('jump', minutes % 10);
+            $('.clock .box:eq(4)').flipbox('jump', Math.floor(seconds / 10));
+            $('.clock .box:eq(5)').flipbox('jump', seconds % 10);
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        // Buttons
+        $('button.prev').click(function() {
+            $(this).closest('.item').find('.box').flipbox('prev', $(this).hasClass('reverse'));
+        });
+        $('button.next').click(function() {
+            $(this).closest('.item').find('.box').flipbox('next', $(this).hasClass('reverse'));
+        });
+        $('button.jump').click(function() {
+            $(this).closest('.item').find('.box').flipbox('jump', $(this).data('index'), $(this).hasClass('reverse'));
+        });
+        $('button.config').click(function() {
+            $(this).closest('.item').find('.box')
+                .flipbox({
+                    animationDuration: $(this).data('duration'),
+                    animationEasing: $(this).data('easing')
+                })
+                .flipbox('next');
+        });
+    </script>
+</body>
+</html>

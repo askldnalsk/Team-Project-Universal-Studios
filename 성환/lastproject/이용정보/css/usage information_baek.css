@@ -1,0 +1,238 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Noto Sans KR';
+    /* background-color:#fff; */
+}
+.body__title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title__img{
+    background-image: url('../img/castle.jpg');
+    background-size: 100vw 597px;
+    width: 1920px;
+    height: 597px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.titel__name {
+    margin-top: 80px;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    /* font-weight: 700; */
+    font-size: 50px;
+    line-height: 61px;
+    color: #FFFFFF;
+}
+.titel__search{
+    margin-top: 250px;
+    font-size: 30px;
+    color: #FFFFFF;
+}
+.content__ticket{
+    width: 180px;
+    height: 60px;
+    border-radius: 50px;
+    border: 2px solid #286BE1;
+    left: 734px;
+    top: 754px;
+
+    background: #fff;
+    color: #286BE1;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.content__membership{
+    margin-left: 20px;
+    /* border:none; */
+    width: 180px;
+    height: 60px;
+    border-radius: 50px;
+    border: 2px solid #286BE1;
+    left: 734px;
+    top: 754px;
+    
+    background: #fff;
+    color: #286BE1;;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.content__click{
+    border:none;
+    background: #3A73CC;
+    color: #FFFFFF;
+}
+
+.content{
+    margin: 60px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+.center{
+    display: grid;
+    gap: 93px;
+    justify-content: center;
+}
+.ticket{
+    background-image: url(../img/ticket.png);
+    background-size: 845px 369px;
+    width: 845px;
+    height: 369px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.ticket__name{
+    /* width: 202px; */
+    margin-top: 10px;
+    margin-left: 5px;
+    height: 24px;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #262424;
+}
+.ticket__box {
+    height: 65px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.ticket__bottom{
+    border-bottom : 1px dashed #999999;
+}
+.ticket__centent{
+    margin-top: 60px;
+    margin-left: 160px;
+}
+.ticket__centent__centent{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 596px;
+    height: 193px;
+    justify-content: flex-start;
+}
+.day {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 27px;
+    background-color: #f6f7f8;
+    border: #AEAEAE solid 1px;
+    border-radius: 5px;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    /* font-weight: bold; */
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+    color: #000000;
+}
+.ticket__text1{
+    display: flex;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    /* font-weight: 400; */
+    font-size: 16px;
+    line-height: 18px;
+    color: #000000;
+}
+.ticket__btn{
+    border: #286BE1 solid;
+    border-radius: 30px;
+    background-color: #286BE1;
+    color: #FFF8F8;
+    width: 60px;
+    height: 30px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ticket__age{
+    font-size: 15px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* font-weight: bold; */
+}
+.ticket__money{
+    font-size: 15px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* font-weight: bold; */
+}
+.hidden{
+    font-family: "Apple SD Gothic Neo";
+}
+.other{
+    width: 1209px;
+    height: 75px;
+    margin: 0 auto;
+    background: #F0F3FF;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 93px;
+    margin-bottom: 93px;
+}
+.other__text{
+    margin-left: 35px;
+}
+.ticket__other{
+    margin-top: 33px;
+}
+
+.none{
+    display: none;
+}
+.flex{
+    display: flex;
+}
+.test{
+    border: none;
+    border-radius: 50px;
+    width: 400px;
+    height: 50px;
+    background-color: #FFF5F5;
+    opacity:0.6;
+    font-size: 20px;
+}
+.search__btn{
+    border: none;
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/search.png);
+    background-size: 30px 30px;
+}

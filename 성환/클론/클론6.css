@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+/*
+ * File       : motion.css
+ * Author     : STUDIO-JT (KMS)
+ * Guideline  : JTstyle.1.1
+ *
+ * Dependency : css/reset.css
+ *              css/jt-strap.css
+ *
+ * SUMMARY:
+ * 1) MOTION
+ * 2) RWD
+ */
+
+
+
+/* **************************************** *
+ * MOTION
+ * **************************************** */
+/* Component */
+.jt-split-text .jt-split-text--line-wrap {
+    overflow: hidden;
+    padding-bottom: 10rem;
+    margin-bottom: -10rem;
+}
+
+/* Slider */
+.main-fullpage {
+    z-index: 3;
+}
+
+.main-fullpage:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}

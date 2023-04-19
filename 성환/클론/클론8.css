@@ -1,0 +1,251 @@
+@charset "utf-8";
+
+/*
+ * File       : rwd-layout.css
+ * Author     : STUDIO-JT (KMS)
+ * Guideline  : JTstyle.2.0
+ *
+ * Dependency : css/reset.css
+ *              css/jt-strap.css
+ *
+ * SUMMARY:
+ * 01) 2000px
+ * 02) 1800px
+ * 03) 1480px
+ * 04) 1023px
+ * 05) 860px
+ * 06) 540px
+ */
+
+
+
+/* **************************************** *
+ * 2000px
+ * **************************************** */
+@media (min-width: 2000px) {
+
+    html {
+        font-size: 0.05254860746190225vw;
+    }
+
+}
+
+
+
+/* **************************************** *
+ * 1800px
+ * **************************************** */
+@media (max-width: 1800px) {
+
+    /* LAYOUT */
+    .wrap {
+        max-width: inherit;
+        margin: 0 100rem;
+    }
+}
+
+
+
+/* **************************************** *
+ * 1480px
+ * **************************************** */
+@media (max-width: 1480px) {
+
+    html {
+        font-size: 0.06756756756756757vw;
+    }
+
+    /* LAYOUT */
+    .wrap {
+        margin: 0 50rem;
+    }
+}
+
+
+
+/* **************************************** *
+ * 1023px
+ * **************************************** */
+@media (max-width: 1023px) {
+
+    html {
+        font-size: 0.09775171065493645vw;
+    }
+
+    /* HEADER */
+    #header {
+        height: 90rem;
+    }
+
+    #logo {
+        width: 169rem;
+        height: 40rem;
+        top: 31rem;
+    }
+
+    .menu-container {
+        top: 33rem;
+    }
+
+    #menu>li {
+        margin: 0 4rem;
+    }
+
+    #menu>li>a {
+        font-size: 16rem;
+        padding: 6rem 8rem;
+    }
+
+    #menu>li>a>span {
+        padding-right: 18rem;
+    }
+
+    #menu>li>a>span:after {
+        font-size: 12rem;
+    }
+
+    .lang-menu {
+        height: 27rem;
+        top: 37rem;
+    }
+
+    .lang-menu a {
+        font-size: 14rem;
+        padding: 8rem 0 5rem;
+    }
+
+    html.desktop.mac .lang-menu a {
+        padding: 6rem 0 7rem;
+    }
+
+    .ios .lang-menu a {
+        padding: 6rem 0 7rem;
+    }
+
+    /* FOOTER */
+    #footer {
+        bottom: 39rem;
+    }
+
+    .footer__inner p {
+        font-size: 13rem;
+    }
+}
+
+
+
+/* **************************************** *
+ * 860px
+ * **************************************** */
+@media (max-width: 860px) {
+
+    html {
+        font-size: 0.13020833333333335vw;
+    }
+
+    /* LAYOUT */
+    body {
+        font-family: sans-serif;
+    }
+
+    .wrap {
+        margin: 0 32rem;
+    }
+
+    br.tbr {
+        display: block !important;
+    }
+
+    /* HEADER */
+    #logo {
+        left: 32rem;
+    }
+
+    .menu-container {
+        right: 125rem;
+    }
+
+    #menu>li {
+        margin: 0 2rem;
+    }
+
+    #menu>li>a {
+        font-size: 16rem;
+    }
+
+    .lang-menu {
+        right: 32rem;
+    }
+
+    /* FOOTER */
+    #footer {
+        left: 32rem;
+    }
+}
+
+
+
+/* **************************************** *
+ * 540px
+ * **************************************** */
+@media (max-width: 540px) {
+
+    html {
+        font-size: 0.26666666666666665vw;
+    }
+
+    /* LAYOUT */
+    .wrap {
+        margin: 0 20rem;
+    }
+
+    br.mbr {
+        display: block !important;
+    }
+
+    /* HEADER */
+    #logo {
+        top: 21rem;
+        left: 24rem;
+    }
+
+    .menu-container {
+        display: none;
+    }
+
+    .lang-menu {
+        top: 27rem;
+        right: 24rem;
+    }
+
+    /* FOOTER */
+    #footer {
+        left: 0;
+        bottom: 29rem;
+        width: 100%;
+    }
+
+    .footer__inner p {
+        font-size: 12rem;
+        text-align: center;
+    }
+
+    .scroll-top {
+        position: fixed;
+        bottom: 58rem;
+        left: 50%;
+        margin-left: -30rem;
+        width: 60rem;
+        height: 60rem;
+        z-index: 10;
+        text-align: center;
+        line-height: 60rem;
+    }
+
+    .scroll-top:after {
+        content: '\e900';
+        font-family: 'jt-font';
+        font-size: 40rem;
+        color: #fff;
+    }
+}

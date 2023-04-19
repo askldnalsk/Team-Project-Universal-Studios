@@ -1,0 +1,28 @@
+*{ 
+    list-style-type: none;
+}
+.main_tema_header{ 
+    background-color: black;
+    
+    height: 10rem;
+}
+.main_tema_top{ 
+    color:#fff;
+}
+.main_tema_body_header{ 
+    margin: 10rem;
+    color:#ddd; 
+}
+.row{ 
+    display: inline;
+}
+.main_tema_body_cardList{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.container{
+    display: grid;
+}
+

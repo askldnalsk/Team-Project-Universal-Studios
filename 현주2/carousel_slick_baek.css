@@ -1,0 +1,90 @@
+/* 반응형
+현주 추가
+참고 https://www.youtube.com/watch?v=fXzbA-YWHVc
+*/
+
+@media (min-width:1025px){
+    .for_slick_slider{
+        display: flex;
+    }
+    .for_slick_slider .main_parade_item{
+        width: 20.8333vw;
+        height: 20.8333vw;
+        margin: 50px;
+    }
+    .for_slick_slider .main_parade_item img {
+        width: 20.8333vw;
+        height: 20.8333vw;
+        transition: all linear 0.3s;
+    }
+
+    .for_slick_slider .slick-center img{
+        transform: scale(1.11);
+    }
+    #parade_now_date{
+        font-size: 30px;
+        color: #2F2F2F;
+        text-align: center;
+        position: relative;
+        top: -10px;
+    }
+}
+
+
+
+
+@media (min-width:769px) and (max-width:1024px){
+    .for_slick_slider{
+        display: flex;
+    }
+    .for_slick_slider .main_parade_item{
+        width: 34.1797vw;
+        height: 34.1797vw;
+        margin: 50px;
+    }
+    .for_slick_slider .main_parade_item img {
+        width: 34.1797vw;
+        height: 34.1797vw;
+        transition: all linear 0.3s;
+    }
+
+    .for_slick_slider .slick-center img{
+        transform: scale(1.11);
+    }
+    #parade_now_date{
+        font-size: 30px;
+        color: #2F2F2F;
+        text-align: center;
+        position: relative;
+        top: -10px;
+    }
+}
+
+
+
+@media (min-width:320px) and (max-width:768px){
+    .for_slick_slider{
+        display: flex;
+    }
+    .for_slick_slider .main_parade_item{
+        width: 45.5729vw;
+        height: 45.5729vw;
+        margin: 50px;
+    }
+    .for_slick_slider .main_parade_item img {
+        width: 45.5729vw;
+        height: 45.5729vw;
+        transition: all linear 0.3s;
+    }
+
+    .for_slick_slider .slick-center img{
+        transform: scale(1.11);
+    }
+    #parade_now_date{
+        font-size: 30px;
+        color: #2F2F2F;
+        text-align: center;
+        position: relative;
+        top: -10px;
+    }
+}

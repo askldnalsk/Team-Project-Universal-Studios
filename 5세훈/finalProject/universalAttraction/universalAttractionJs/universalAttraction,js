@@ -1,0 +1,556 @@
+'use strict'
+
+
+const $lookNum = document.querySelector('.lookNum')
+let pageFNum = 9;
+let page = 9;
+const $show_moreBtn = document.querySelector('.show_moreBtn')
+$show_moreBtn.addEventListener('click',e=>{
+page += 9;
+choi();
+console.log(`page : ${page}`);
+console.log(pageFNum);
+});
+
+// 드롭창 구현
+
+const dropdownBtnList = document.querySelectorAll('.btn_select');
+
+dropdownBtnList.forEach(item => {
+    const arrowIcon = item.querySelector('.fa-caret-down');
+    item.addEventListener('click', e => {
+        // console.log(e.currentTarget);
+        // console.log(item);
+        arrowIcon.classList.toggle('fa-caret-down-rotate', !item.classList.contains('on'));
+        item.classList.toggle('on', !item.classList.contains('on'));
+        
+    });
+    
+            // item.addEventListener('focusout', e => {
+                
+            //     // console.log(item.parentNode);
+            //     item.classList.remove('on');
+            //     arrowIcon.classList.remove('fa-caret-down-rotate');
+                
+            // })
+})
+
+
+
+// 드롭창 타이틀 변경
+
+const $attraction_list_member = document.querySelector('.attraction_specialList');
+const $list = $attraction_list_member.querySelectorAll('li');
+const $boxTittle = document.querySelector('.btn_select_box1');
+const $btn_select_mode1 = document.querySelector('.btn_select_mode1');
+
+
+
+const $attraction_list_member2 = document.querySelector('.attraction_Limit');
+const $list2 = $attraction_list_member2.querySelectorAll('li');
+const $boxTittle2 = document.querySelector('.btn_select_box2');
+const $btn_select_mode2 = document.querySelector('.btn_select_mode2');
+
+
+const $attraction_list_member3 = document.querySelector('.attraction_break')
+const $list3 = $attraction_list_member3.querySelectorAll('li');
+const $boxTittle3 = document.querySelector('.btn_select_box3');
+const $btn_select_mode3 = document.querySelector('.btn_select_mode3');
+
+let comment = '전부';
+
+
+
+
+
+$list.forEach(item=>{ 
+    item.addEventListener('click',e =>{ 
+        comment = e.target.textContent;
+        $boxTittle.textContent = comment;
+        console.log(comment);
+        page = 9;
+        choi();
+
+        if(e.currentTarget !== item){
+            console.log(e.target); 
+            $btn_select_mode1.classList.remove('on');
+        }
+        if($btn_select_mode1.classList.contains('on'))
+        { 
+        $btn_select_mode1.classList.remove('on');
+     }
+        
+    })
+});
+
+let limitComment = '전체';
+$list2.forEach(item=>{ 
+    item.addEventListener('click',e =>{ 
+        limitComment = e.target.textContent;
+        $boxTittle2.textContent = limitComment;
+        page = 9;
+        choi();
+        if($btn_select_mode2.classList.contains('on'))
+        { 
+            $btn_select_mode2.classList.remove('on');
+        }
+        else{ 
+            $btn_select_mode2.classList.add('on');
+        }
+    })
+})
+
+let alignComment = '전체';
+$list3.forEach(item=>{ 
+    item.addEventListener('click',e =>{ 
+        alignComment = e.target.textContent;
+        $boxTittle3.textContent = alignComment;
+        page = 9;
+        choi();
+        if($btn_select_mode3.classList.contains('on'))
+        { 
+            $btn_select_mode3.classList.remove('on');
+        }
+        else{ 
+            $btn_select_mode3.classList.add('on');
+        }
+    })
+})
+
+
+let toggleNum = 0;
+let express = document.querySelector('#toggle');
+express.addEventListener('click',e=>{
+    if(toggleNum){ 
+        toggleNum --;
+        console.log(toggleNum);
+    }
+    else{
+    toggleNum ++;
+    console.log(toggleNum);
+    }
+    page = 9;
+    choi();
+})
+
+
+
+
+
+
+
+
+/*
+    const btn = document.querySelectorAll('.btn_select');
+ 
+
+    const list2 = document.querySelector('.attraction_list_member2');
+    const list3 = document.querySelector('.attraction_list_member3');
+    const list4 = document.querySelector('.attraction_list_member4');
+
+        
+        btn.forEach((item,idx)=>{
+             const icon = item.querySelector('.fa-caret-down');
+            item.addEventListener('click', (e) => {
+                item.classList.toggle('on');
+                icon.classList.toggle('fa-caret-down-rotate');
+                
+                btn.forEach((item2,idx2)=>{
+                    if(idx !== idx2){
+                        const icon2 = document.querySelectorAll('.fa-caret-down')
+                        icon2.forEach((item3,idx3)=>{
+                                item3.classList.toggle('fa-caret-down-rotate',idx3===idx);
+                        })
+                    item2.classList.remove('on');
+                    }
+                })
+          });
+        });
+
+        
+
+
+
+
+        
+  */  
+        
+        // 통신
+    
+
+        fetch('universalAttractionJs/json/data.json')
+        .then(res => res.json())
+        .then(result => { 
+            // console.log(result);
+            makeList(result);
+            
+        })
+        
+        const arr = [];
+        
+        
+        const $attraction__listHeaderNum = document.querySelector('.attraction__listHeaderNum');
+        const $attraction__listSmallNum = document.querySelector('.smallNum');
+        
+        // console.log(arr);
+        
+       
+
+        function filterFn(){
+            setTimeout(function(){ 
+                late();
+                
+            },100) 
+        }
+        filterFn();
+                
+    //    0.1초지난 후 함수
+
+        function late(){
+            let testNum = 0;
+            let result = arr.filter((item,inx)=>{ 
+        // const condition_1 = (item.area === selectedArea);
+                // const condition_1 = selectedArea.includes(item.area)
+        // const condition_1 = (item.area === selectedArea)
+                // const condition_2 = (item.special === selectedSpecial);
+                // const condition_3 = (item.limit === selectedLimit);
+                // const condition_4 = (item.express === selectedExpress);
+                // const condition_5 = (item.align === selectedAlign);
+                let condition_1 = false;
+                let condition_2 = false;
+                let condition_3 = false;
+                let condition_4 = false;  //스위치 토글
+                let condition_5 = false;
+
+
+                    
+                if(selectedArea.includes(item.area)){
+                    condition_1 = true;
+                }
+
+                if(selectedSpecial==='전부'){
+                    console.log('전부');
+                    condition_2 = true;
+                }
+                if(selectedSpecial===item.special){
+                    condition_2 = true;
+                }
+                if(selectedLimit === '전체'){
+                    console.log(selectedLimit);
+                    console.log('전체');
+                    condition_3 = true;
+                    console.log(item.limit);
+                }
+
+                if(selectedLimit===item.limit){
+                    condition_3 = true;
+                }
+
+                if(0 === toggleNum){
+                    condition_4 = true;
+                }if(item.express === true){
+                condition_4 = true;
+                }
+
+
+                if(selectedAlign==='전체'){
+                    console.log('전체');
+                    condition_5 = true;
+                }
+
+                if(selectedAlign===item.align){
+                    condition_5 = true;
+                }
+                testNum ++;
+                console.log(`${item.id}`);
+                console.log(`(${item.area}) : ${condition_1} // ${selectedArea}`);
+                console.log(`(${item.special}) : ${condition_2} // ${selectedSpecial}`);
+                return condition_1 && condition_2 && condition_3 && condition_4 && condition_5; 
+                
+            });
+            console.log('----------------');
+            // console.log(result);
+            result.forEach((item,index)=>{
+                makeItem(item,index);
+            })
+            
+            $attraction__listHeaderNum.innerHTML= result.length;
+            $attraction__listSmallNum.innerHTML = result.length;
+            pageFNum = result.length;
+        }
+
+        
+
+        function makeList(items){
+            $attractionContainer.innerHTML = null;
+            items.forEach((item,index)=>{ 
+                test_choi(item,index);
+                // console.log(index);
+                $attractionContainer.innerHTML='';
+
+            });
+        }
+        function test_choi(item,index){
+            arr.push(item,index);
+            makeItem(item,index);
+        }
+        
+        function makeItem(item,index){ 
+            console.log(index);
+            // choi_lookNum ++
+            // test1(item);
+            // console.log(item);
+            
+            const $div = document.createElement('div');
+            $div.classList.add('item__box');
+            // console.log(item.id.length);
+            // function test(){
+            //     if(item.id.length<=25){
+            //         return 'item_topComment_space'
+            //     }
+            //     return ''
+            // }
+
+
+            // 어트랙션 카테고리 분류
+
+            let attractionlist = '';
+            if (item.attraction==='playlandEtc') {
+                attractionlist ='플레이랜드 기타';
+            }
+            if(item.attraction==='showAttraction'){ 
+                attractionlist = '쇼 어트랙션';
+            }
+            if(item.attraction==='rideAttraction'){ 
+                attractionlist = '라이드 어트랙션';
+            }
+            if(item.attraction==='streetShow'){ 
+                attractionlist = '스트리트 쇼';
+            }
+            if(item.attraction==='game'){ 
+                attractionlist = '게임';
+            }
+
+            //리스트 생성
+
+            if (index<page){
+                $div.innerHTML=`
+                    <img src="./universalAttractionImage/${item.area}_${item.id}.jpg" class="item_choi_img">               
+                    <div class="item_comment">
+                        <div class="item_topComment">
+                            <span class="item__areaSection">${item.area}</span>
+                            <button class="item_comment_btn_${item.attraction}">${attractionlist}</button>
+                        </div>
+                        <div>
+                            <span class="item__attractionName">${item.id}</span>
+                        </div>
+                    </div>
+                `;
+                $attractionContainer.appendChild($div);
+                console.log('그만');
+
+            }
+
+            if(page >= pageFNum){
+                console.log('되는겨?');
+                console.log(pageFNum);
+                $lookNum.innerHTML=`
+                    1 - ${pageFNum}
+                `;
+            } else{
+                $lookNum.innerHTML=`
+                        1 - ${page}
+                    `;
+            }
+
+            const modal = document.querySelector(".modal");
+            const modalItembox = document.querySelectorAll('.item__box');
+        
+            modalItembox.forEach(item=>{ 
+                item.addEventListener('click',e=>{ 
+                    modal.classList.remove("hidden");
+                })
+            })
+
+            if(page > pageFNum){ 
+                $show_moreBtn.style.display = 'none';
+            }
+            else{ 
+                $show_moreBtn.style.display = 'inline-block';
+            }
+
+        }
+
+        
+
+
+
+        const $attractionContainer = document.querySelector("#attraction__bodyCotainer");
+
+        
+ 
+        // 체크 이벤트
+        
+    
+        document.querySelector('input[id=chk2]').addEventListener('change',function (e){ 
+            e.preventDefault();
+            
+            let list = document.querySelectorAll('input[class=checkedBox]');
+            console.log(list);
+            list.forEach((item, idx)=>{ 
+                if(idx !== list.length){
+                item.checked = this.checked;
+                }
+            })
+        }
+    )
+
+        document.querySelector('input[id=chk1]').addEventListener('change',function (e){ 
+            e.preventDefault();
+           
+            let list = document.querySelectorAll('input[class=checkedBox]');
+            list.forEach((item, idx)=>{
+                if(idx !== list.length){                   
+                    item.checked = this.checked;
+                    // console.log(item.checked);
+                }
+            })
+        }
+    )
+
+
+    let checkList = document.querySelector('input[id=chk1]');
+    let checkListTwo = document.querySelector('input[id=chk2]');
+    let checkAll = document.getElementsByName('area');
+    let attraction_areaArr = ['위저딩 월드 오브 해리포터', '슈퍼 닌텐도 월드','쥬라기 공원','미니언 파크','뉴욕','할리우드','샌프란시스코','워터 월드','원더랜드','오징어 게임'];
+    
+   
+
+
+    checkAll.forEach(item1=>{
+        // console.log(item1.nextElementSibling.nextElementSibling.childNodes);
+        item1.addEventListener('change',e=>{
+            attraction_areaArr = [];
+            let value = 0;
+            checkAll.forEach(item2=>{
+                let areaName = item2.nextElementSibling.nextElementSibling.childNodes[1].innerHTML
+                if(!item2.checked){
+                    value --;
+                    // console.log(test__choi);
+                    // console.log('false');
+                } else {
+                    // console.log(areaName);
+                    value ++;
+                    attraction_areaArr.push(areaName);
+                }
+            
+                    // console.log(test__choi);
+                // console.log('ture');
+            })
+            page = 9;
+            choi();
+            if(value<checkAll.length){
+                checkList.checked = false;
+                checkListTwo.checked = false;
+                
+            } else {
+                checkList.checked = true;
+                checkListTwo.checked = true;
+            }
+                test()
+            // console.log(attraction_areaArr);
+            // console.log(checkListTwo.checked);
+        })
+    })
+
+
+
+
+    // checkAll.forEach(item1=>{
+    //     item1.addEventListener('change',e=>{
+    //         let value = 0
+    //         checkAll.forEach(item2=>{
+    //             if(!item2.checked){
+    //                 value --;
+    //             }
+    //                 value ++;
+    //         })
+    //         if(value<checkAll.length){
+    //             checkListTwo.checked = false;
+                
+    //         } else {
+    //             checkListTwo.checked = true;
+    //         }
+            
+    //     })
+    // })
+
+
+
+    // checkAll.forEach((item,inx)=>{ 
+    //     item.addEventListener('change',e=>{
+    //             if(item.checked === false){ 
+    //                  test__choi === false
+    //                  console.log(inx);
+    //                 }
+    //                 checkList.checked = test__choi;
+    //                 test__choi = true
+    //         })
+    //     })
+        
+    
+       
+
+    // let selectedArea = [''];
+    // let selectedArea = '위저딩 월드 오브 해리포터';
+    
+        // let selectedArea = ['b','bb','bbb','bbbb'];
+        // let selectedSpecial = 'c';
+        // let selectedLimit = 'd';
+        // let selectedExpress = 'e';
+        // let selectedAlign = 'f';
+
+
+    // console.log(attraction_areaArr);
+
+        let selectedArea = ['위저딩 월드 오브 해리포터', '슈퍼 닌텐도 월드','쥬라기 공원','미니언 파크','뉴욕','할리우드','샌프란시스코','워터 월드','원더랜드','오징어 게임']
+        let selectedSpecial = '전부';
+        let selectedLimit = '전체';
+        let selectedExpress = 0;
+        let selectedAlign = '전체';
+
+    function choi(){
+        selectedArea = attraction_areaArr;
+        selectedSpecial = comment;
+        selectedLimit = limitComment;
+        selectedExpress = toggleNum;
+        selectedAlign = alignComment;
+        console.log(selectedArea);
+        $attractionContainer.innerHTML='';
+        console.log(selectedSpecial);
+        late();
+    }
+
+
+    
+    function test(){
+        attraction_areaArr.forEach(item=>{
+            console.log(item);
+        })
+    }
+    // console.log(attraction_areaArr);
+        
+    
+    
+
+    // 페이지 리셋(검색버튼 리셋)
+    const reset_btn = document.querySelector('.attraction__reset');
+    reset_btn.addEventListener('click',e=>{
+        location.reload();
+    })
+
+  
+
+
+
+        

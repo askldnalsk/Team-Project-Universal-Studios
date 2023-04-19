@@ -1,0 +1,365 @@
+.rap {
+    max-width: 1268px;
+    padding: 0 1.4rem;
+    margin-top: .3rem;
+  }
+  
+  .dateHead {
+    margin-bottom: .4rem;
+  }
+  
+  .dateHead div {
+    background: #fff;
+    color: #999999;
+    text-align: center;
+  }
+  
+  .grid1,.grid2 {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 5px;
+  }
+  
+  .grid1 div {
+    font-family: "Apple SD Gothic Neo";
+    font-weight: 700;
+    padding: .6rem;
+    font-size: 1.2rem;
+    /* cursor: pointer; */
+  }
+
+  .grid2 div {
+    display: flex;
+    justify-content: center;
+    font-size: .9rem;
+    cursor: pointer;
+    flex-direction: column;
+  }
+  
+  .dateBoard div {
+    color: #222;
+    font-weight: bold;
+    min-height: 6rem;
+    padding: .6rem .8rem;
+    border-radius: .6rem;
+    /* border: 1px solid #eee; */
+  }
+  
+  .noColor {
+    background: #eee;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+  
+  .btn {
+   display: block;
+   width: 20px;
+   height: 20px;
+   border: 3px solid #000;
+   border-width: 3px 3px 0 0;
+   cursor: pointer;
+  }
+  
+  .prevDay {
+    transform: rotate(-135deg);
+  }
+  
+  .nextDay {
+    transform: rotate(45deg);
+  }
+  
+  .dateBoard div p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin-top: 1rem;
+  }
+  
+  /* ------------- */
+  
+  * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;  
+  }
+
+  /* 달력 이미지  오늘 + 공휴일*/
+  .today{/* 오늘 */
+    background-image: url('../img/오늘.png');
+    background-size: 8vw;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .newYearSDay{/* 신정 */
+    background-image: url('../img/신정.png');
+    background-size: 8vw;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .seollal{/* 설날 */
+    background-image: url('../img/설날.png');
+    background-size: 8vw;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .samiljeol{/* 삼일절 */
+    background-image: url('../img/삼일절.png');
+    background-size: 8vw;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .childrenSDay{/* 어린이날 */
+    background-image: url('../img/어린이날.png');
+    background-size: 8vw;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .buddhaSBirthday{/* 석가탄신일 */
+    background-image: url('../img/석가탄신일.png');
+    background-size: 8vw;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .memorialDay{/* 현충일 */
+    background-image: url('../img/현충일.png');
+    background-size: 8vw;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .nationalLiberationDay{/* 광복절 */
+    background-image: url('../img/광복절.png');
+    background-size: 8vw;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .chuseok{/* 추석 */
+    background-image: url('../img/추석.png');
+    background-size: 8vw;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .theNationalFoundationDayOfKorea{/* 개천절 */
+    background-image: url('../img/개천절.png');
+    background-size: 8vw;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .hangulProclamationDay{/* 한글날 */
+    background-image: url('../img/한글날.png');
+    background-size: 8vw;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .christmas{/* 크리스마스 */
+    background-image: url('../img/크리스마스.png');
+    background-size: 8vw;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .toMonth{
+    width: 1268px;
+    height: 88px;
+    margin: 0 auto;
+    background: #F0F3FF;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 93px;
+    margin-bottom: 93px;
+    align-items: center;
+}
+
+.box{
+  gap: 20px;
+  display: flex;
+  height: 109px;
+  border: 1px solid black;
+  justify-content: space-between;
+}
+.click__day {
+  font-family: 'Noto Sans KR';
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5em;
+  line-height: 36px;
+}
+.box .a{
+  flex: 1;
+  display: grid;
+  align-items: center;
+}
+.boxitem__1, .boxitem__2, .boxitem__3{
+  display: flex;
+  justify-content: space-between;
+}
+
+.fontSize15{
+  font-size: 15px;
+  font-weight: bold;
+  color: #000;
+}
+.fontSize25{
+  font-size: 25px;
+}
+
+.fontColerA6A0A0{
+  color: #a6a0a0;
+}
+
+.fontColer214FF2{
+  color: #214FF2;
+}
+
+.pmBtn{
+  display: flex;
+}
+.plusBtn, .minusBtn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33.82px;
+  height: 31.21px;
+  font-size: 30px;
+}
+
+.nomouse{
+  pointer-events : none;
+}
+
+
+.event__box{
+  gap: 60px;
+  display: flex;
+  flex-direction: column;
+}
+.event{
+  background-color: #214FF2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 77.74px;
+  width: 90%;
+}
+.event__P1{
+  height: 58px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.event__P2{
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.event__P2__1{
+  gap: 5%;
+  flex: 1.5;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+.event__P2__2{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.event__P2__2__1{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.event__P2__2__2{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.event__title{
+  font-family: 'Noto Sans KR';
+  font-weight: 700;
+  font-size: 1.5em;
+}
+.img__1{
+  width: 150px;
+  height: 95px;
+  background-image: url('../../../혜택정보/img/슬기로운\ 네이버페이\ 생활.png');
+  background-size: 150px 95px;
+}
+
+.img__2{
+  width: 150px;
+  height: 95px;
+  background-image: url('../../../혜택정보/img/카카오페이.png');
+  background-size: 150px 95px;
+}
+
+.img__3{
+  width: 150px;
+  height: 95px;
+  background-image: url('../../../혜택정보/img/누구나\ 온라인\ 예매.png');
+  background-size: 150px 95px;
+}
+
+
+.evnt__item__1{
+  display: flex;
+  align-items: center;
+  font-family: 'Noto Sans KR';
+  font-size: .8em;
+  font-weight: 700;
+}
+.event__Fcontent{
+  display: flex;
+  justify-content: center;
+}
+.event__content{
+  width: 80%;
+}
+.center{
+  display: flex;
+  justify-content: center;
+}
+.event__P1__1{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 57.99px;
+  flex: 1.5;
+  background-color: #F7F7F7;
+}
+.event__P1__2{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 57.99px;
+  flex: 1;
+  background-color: #EEEEEE;
+}

@@ -1,0 +1,112 @@
+*{ 
+    list-style-type: none;
+    margin:0;
+}
+.main_tema_header{ 
+    background-color: black;
+    
+    height: 10rem;
+}
+.main_tema_top{ 
+    color:#fff;
+}
+.main_tema_body_header{ 
+    margin: 10rem;
+    color:#ddd; 
+}
+
+.main_tema_body_cardList{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img{ 
+    max-width:100%;
+    object-fit: cover;
+}
+.main_tema_body_cotainer{ 
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_tema_body_cardList_hoverMode{ 
+    display: none;
+}
+.grayscale{ 
+    filter: grayscale(1);
+    position: relative;
+}
+.grayscale:hover{ 
+    filter:grayscale(0);
+}
+
+.main_tema_body_cardList_noneMode{ 
+    display:none;
+}
+.main_tema_body_cardList_MobileMode{ 
+    display: none;
+}
+
+/* tablet mode */
+@media(max-width: 1024px){ 
+    .img_DefaultMode{ 
+        display:none;
+        max-width: 800px;
+    }
+    .main_tema_body_cardList_noneMode{ 
+        display: flex;
+        
+        
+        
+    }
+}
+
+/* mobilemode */
+@media(max-width: 768px){ 
+    .main_tema_body_cardList_MobileMode{ 
+        display:block;
+    }
+    .main_tema_body_cardList_noneMode{ 
+        display: none;
+    }
+}
+
+
+/* 배경 */
+.backSky {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to right, #111, #0e0f19);  
+    overflow: hidden;
+  }
+  
+  /* 별을 감싼 부모 */
+  .sky {
+    width: 100vw;
+    height: 100vw;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: moveStar 240s linear infinite;
+  }
+  
+  /* 별 */
+  .sky .star {
+    fill: #fff;
+    stroke: none;
+    stroke-width: 0;
+  }
+  
+  /* 별 이동효과 */
+  @keyframes moveStar {
+    from {
+      transform: translate(-50%, -50%) rotate(0)
+    }
+  
+    to {
+      transform: translate(-50%, -50%) rotate(360deg)
+    }
+  }

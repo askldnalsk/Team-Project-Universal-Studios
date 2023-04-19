@@ -1,0 +1,361 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Noto Sans KR';
+    /* background-color:#fff; */
+}
+.body__title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title__img{
+    background-image: url('../img/마리오\ 캐슬.png');
+    background-size: 100% auto;
+    width: 1920px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.titel__name {
+    margin-top: 80px;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 350px;
+    color: #FFFFFF;
+}
+.titel__search{
+    margin-top: 250px;
+    font-size: 30px;
+    color: #FFFFFF;
+}
+.center{
+    display: grid;
+    justify-content: center;
+    justify-items: center
+}
+
+.other{
+    width: 1118px;
+    height: 75px;
+    margin: 0 auto;
+    background: #F0F3FF;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 130px;
+    margin-bottom: 50px;
+}
+.other_1{
+    width: 1118px;
+    height: 75px;
+    margin: 0 auto;
+    background: #F0F3FF;
+    border-radius: 20px 20px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 60px;
+}
+.other__text{
+    margin-left: 30px;
+    color: #2f2f2f;
+    font-size: 25px;
+
+}
+
+.hidden{
+    visibility: hidden;
+}
+.flex{
+    display: flex;
+}
+.test{
+    gap: 30px;
+    box-sizing: border-box;
+    width: 227px;
+    height: 325px;
+    background: #FFFFFF;
+    border: 1px solid #C5B8B8;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.test_1{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.center__box{
+    opacity:0.9;
+    box-sizing: border-box;
+    width: 1118px;
+    height: 551px;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    margin-top: -75px;
+    
+}
+.test_2{
+    display: flex;
+    width: 1117.97px;
+    justify-content: space-around;
+}
+.item2{
+    width: 150px;
+    height: 95px;
+}
+
+.item1{
+    width: 150px;
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    justify-content: flex-start;
+    color: #2f2f2f;
+}
+.item4{
+    display: flex;
+    width: 70%;
+    justify-content: flex-end;
+    flex-direction: row;
+}
+.item3{
+    margin-top: -12px;
+    font-size: 14px;
+    font-weight: 300;
+}
+.img1{
+    background-image: url('../img/현대카드.png');
+    background-size: 150px 95px;
+    /* transform: rotate(0deg); */
+}
+.img2{
+    background-image: url('../img/KT멤버십카드.png');
+    background-size: 150px 95px;
+}
+.img3{
+    background-image: url('../img/T멤버십카드.png');
+    background-size: 150px 95px;
+}
+.img4{
+    background-image: url('../img/LGU+멤버십카드.png');
+    background-size: 150px 95px;
+}
+.img5{
+    background-image: url('../img/토끼.png');
+    background-size: 75px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.img6{
+    background-image: url('../img/교복할인심슨.jpg');
+    background-size: 150px 95px;
+}
+.img7{
+    background-image: url('../img/군인할인심슨.jpg ');
+    background-size: 150px 95px;
+}
+.img8{
+    background-image: url('../img/문화누리카드.png ');
+    background-size: 150px 95px;
+}
+.img9{
+    background-image: url('../img/최대50할인.png ');
+    background-size: 150px 95px;
+}
+.img10{
+    background-image: url('../img/장애인할인.png ');
+    background-size: 95px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.img11{
+    background-image: url('../img/국가유공자할인.jpg ');
+    background-size: 150px 95px;
+}
+.img12{
+    background-image: url('../img/임산부우대.png ');
+    background-size: 150px 95px;
+}
+.img13{
+    background-image: url('../img/다둥이\ 행복카드\ 우대.png ');
+    background-size: 150px 95px;
+}
+.img14{
+    background-image: url('../img/슬기로운\ 네이버페이\ 생활.png');
+    background-size: 150px 95px;
+}
+.img15{
+    background-image: url('../img/카카오페이.png');
+    background-size: 150px 95px;
+}
+.img16{
+    background-image: url('../img/로고_블랙_최종.png');
+    background-size: 150px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.item__btn{
+    border: #286BE1 solid;
+    border-radius: 30px;
+    background-color: #286BE1;
+    color: #FFF8F8;
+    width: 68px;
+    height: 33px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+/* 헤더 */
+.logo{
+    margin: 13px 0px 0px 3.9063vw;
+}
+.top_menu{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.menu_bar{
+    font-size: 20px;
+    font-weight: bold;
+}
+.right_menu{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 60px;
+}
+.menu_icon{
+    margin: 0 0.9375vw;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+/* 풀메뉴 드롭다운 */
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.top_menu{
+    width: 100vw;
+    overflow: hidden;
+}
+.top_menu a {
+    color: #fff;
+}
+.menu_bar_submenu {
+    height: 0;
+    margin-top: 40px;
+}
+.menu_bar_submenu li {
+    line-height: 20px;
+    font-size: 18px;
+}
+.menu_bar_submenu li a {
+    color: #2f2f2f;
+}
+.top_menu:hover{
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(20px);
+    transition-duration: 0.5s;
+    height: 385px;
+    transition-duration: 0.5s;
+    box-shadow: #286ce13d 0px 1px 30px 1px;
+}
+
+/*유니버셜 로고 흰색에서 회색으로 변경*/
+.logo_gray {
+    display: none;
+}
+.top_menu:hover .logo_white{
+    display: none !important;
+}
+.top_menu:hover .logo_gray{
+    display: inline-block !important;
+}
+
+/*상단 오른쪽 아이콘 흰색에서 회색으로 변경*/
+.search_icon_gray {
+    display: none;
+}
+.ticket_icon_gray{
+    display: none;
+}
+.user_icon_gray{
+    display: none;
+}
+.top_menu:hover .search_icon_white,.top_menu:hover .ticket_icon_white,.top_menu:hover .user_icon_white{
+    display: none !important;
+}
+.top_menu:hover .search_icon_gray,.top_menu:hover .ticket_icon_gray,.top_menu:hover .user_icon_gray
+{
+    display: inline-block !important;
+}
+.top_menu:hover .menu_bar_submenu {
+    height: 250px;
+    transition-duration: 0.5s;
+}
+.top_menu:hover .main_menu_center > li > a {
+    color: #2f2f2f;
+    font-weight: 800;
+}
+.top_menu:hover .menu_icon{
+    color: #2f2f2f;
+}
+.main_menu_center { 
+    width: 902px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 90px;
+}
+.main_menu_center li {
+    margin-top: 30px;
+}
+.menu_bar_submenu > li > a:hover {
+    color: #286BE1;
+    transition-duration: 0.3s;
+}
+.right_menu {
+    height: 90px;
+}
+

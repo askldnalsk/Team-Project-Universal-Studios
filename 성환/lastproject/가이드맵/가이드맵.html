@@ -1,0 +1,283 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../../현주2/header_gray.css">
+    <link rel="stylesheet" href="../../../../현주2/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0/all.min.css">
+    <style>
+        a {
+            text-decoration: none;
+            color: #555;
+        }
+
+        .subWrap {
+            position: relative;
+            padding: 0 0 130px;
+            width: 100%;
+        }
+
+        .lnbArea {
+            position: relative;
+            max-width: 1170px;
+            margin: 0 auto;
+            padding-top: 30px;
+        }
+
+        .guideMapBg {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: url(/common/images/icon/guideMapBg.png) no-repeat 50% 100%;
+        }
+
+        .guideMapBg+.container {
+            text-align: center;
+        }
+
+        .container {
+            position: relative;
+            width: 1170px;
+            margin: 0 auto;
+        }
+
+        .guideMapBg+.container .purpleBtn {
+            margin-top: 150px;
+            padding: 0 60px;
+        }
+
+        .purpleBtn {
+            display: inline-block;
+            padding: 0 70px;
+            height: 56px;
+            line-height: 54px;
+            font-size: 18px;
+            color: #fff;
+            text-align: center;
+            border-radius: 28px;
+            background: rgb(111, 35, 249);
+            background: -ms-linear-gradient(to bottom right, rgba(111, 35, 249, 1) 0%, rgba(85, 10, 223, 1) 100%);
+            background: -o-linear-gradient(to bottom right, rgba(111, 35, 249, 1) 0%, rgba(85, 10, 223, 1) 100%);
+            background: -moz-linear-gradient(to bottom right, rgba(111, 35, 249, 1) 0%, rgba(85, 10, 223, 1) 100%);
+            background: -webkit-linear-gradient(to bottom right, rgba(111, 35, 249, 1) 0%, rgba(85, 10, 223, 1) 100%);
+            background: linear-gradient(to bottom right, rgba(111, 35, 249, 1) 0%, rgba(85, 10, 223, 1) 100%);
+        }
+
+        .guideMapBg+.container .purpleBtn+.purpleBtn {
+            margin-left: 30px;
+        }
+
+        .guideMapDiv {
+            border: 1px solid #e1e1e1;
+            background: #fff;
+            padding: 100px 0;
+            margin-top: 80px;
+            text-align: center;
+        }
+
+        .guideMapDiv .tit {
+            font-size: 38px;
+            font-family: 'NotoSans-Black', '맑은 고딕', 'Malgun Gothic', sans-serif;
+            color: #000;
+            line-height: 50px;
+        }
+
+        .cPurple {
+            color: #550adf !important;
+        }
+
+        .guideMapDiv .txt {
+            font-size: 18px;
+            line-height: 28px;
+            margin-top: 20px;
+        }
+
+        .guideMapDiv .img {
+            margin-top: 40px;
+        }
+
+        .cBody {
+            margin-top: 150px;
+        }
+    </style>
+</head>
+
+
+
+
+
+
+<body>
+    <header id="main_header">
+        <ul class="top_menu">
+            <div class="logo">
+                <!-- <img class="logo_white" src="../../../../현주/img/로고_2f2f2f.png" alt="유니버셜스튜디오 한국버전 로고"> -->
+                <img class="logo_gray" src="../../../../현주2/img/로고_2f2f2f.png" alt="유니버셜스튜디오 한국버전 로고">
+            </div>
+            <div class="main_menu_container">
+                <li>
+                    <a href="#" class="menu_bar">요금혜택</a>
+                    <ul class="menu_bar_submenu">
+                        <li><a href="#">이용요금</a></li>
+                        <li><a href="#">이달의 혜택</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="menu_bar">즐길거리</a>
+                    <ul class="menu_bar_submenu">
+                        <li><a href="#">어트랙션</a></li>
+                        <li><a href="#">퍼레이드</a></li>
+                        <li><a href="#">공연</a></li>
+                        <li><a href="#">MD</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="menu_bar">추천코스</a>
+                    <ul class="menu_bar_submenu">
+                        <li><a href="#">추천코스</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="menu_bar">소통서비스</a>
+                    <ul class="menu_bar_submenu">
+                        <li><a href="#">운영/운휴</a></li>
+                        <li><a href="#">파크 이용안내</a></li>
+                        <li><a href="#">편의시설/제도</a></li>
+                        <li><a href="#">오시는 길</a></li>
+                        <li><a href="#">가이드 맵</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="menu_bar">이용가이드</a>
+                    <ul class="menu_bar_submenu ">
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">고객소리함</a></li>
+                    </ul>
+                </li>
+            </div>
+
+
+
+            <div class="right_menu">
+                <div class="menu_icon">
+                    <!-- <img class="search_icon_white" src="../../../../현주/img/icon/search_blacck.png" alt="검색 아이콘"> -->
+                    <img class="search_icon_gray" src="../../../../현주2/img/icon/search_blacck.png" alt="검색 아이콘콘">
+                </div>
+                <div class="menu_icon">
+                    <!-- <img class="ticket_icon_white" src="../../../../현주/img/icon/ticket_black.png" alt="이용권 구매 아이콘"> -->
+                    <img class="ticket_icon_gray" src="../../../../현주2/img/icon/ticket_black.png" alt="이용권 구매 아이콘">
+                </div>
+                <div class="menu_icon">
+                    <!-- <img class="user_icon_white" src="../../../../현주/img/icon/user_black.png" alt="마이페이지 아이콘"> -->
+                    <img class="user_icon_gray" src="../../../../현주2/img/icon/user_black.png" alt="마이페이지 아이콘">
+                </div>
+                <div class="menu_icon three_bar">
+                    <div class="main_header_tab_app">
+
+                        <nav role="c">
+                            <div id="menuToggle">
+
+                                <input type="checkbox">
+
+                                <span></span>
+                                <span></span>
+                                <span></span>
+
+                                <ul id="menu">
+                                    <a href="#">
+                                        <li>요금혜택</li>
+                                    </a>
+                                    <a href="#">
+                                        <li>즐길거리</li>
+                                    </a>
+                                    <a href="#">
+                                        <li>추천코스</li>
+                                    </a>
+                                    <a href="#">
+                                        <li>소통서비스</li>
+                                    </a>
+                                    <a href="#">
+                                        <li>이용가이드</li>
+                                    </a>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </ul>
+    </header>
+    <div id="cBody">
+        <div class="subWrap">
+
+            <!-- <h2 class="">가이드맵</h2> -->
+            <div class="guideMapBg">&nbsp;</div>
+
+            <div class="container">
+                <a class="purpleBtn" href="./유니버셜.jpg"><span>국문 가이드 맵 다운로드</span></a>
+                <!-- <a class="purpleBtn" href=""><span>영문 가이드 맵 다운로드</span></a> -->
+
+                <div class="guideMapDiv">
+                    <p class="tit">보다 편하게, 보다 알차게<br>
+                        <span class="cPurple">모험을 즐기세요!</span>
+                    </p>
+                    <p class="txt">지금 바로 유니버셜스튜디오 가이드 맵을 다운받으세요!<br>
+                        어트랙션, 다이닝, 쇼핑 가이드를 한 눈에 확인 할 수 있습니다.</p>
+                    <p class="img"><img style="width: 100%;" alt="" src="./유니버셜.jpg"></p>
+                    <p>화면 클릭시 자세히 보기</p>
+                </div>
+            </div>
+            <!-- // container -->
+        </div><!-- // subWrap -->
+    </div>
+    <footer class="main_section footer">
+        <div class="footer_section_total">
+            <div class="footer_content_left">
+                <div class="footer_content_top">
+                    <div class="footer_US_logo"><img src="../../../../현주2/img/로고_화이트_최종.png" alt="유니버셜스튜디오 로고"></div>
+                    <div class="footer_US_title">UNIVERSAL STUDIO</div>
+                </div>
+                <div class="footer_content_bottom">
+                    <div class="footer_use_content">
+                        <span>이용약관</span>
+                        <span class="footer_use_import">개인정보처리방침</span>
+                        <span>위치기반서비스 이용약관</span>
+                        <span>법적고지</span>
+                        <span>사업자정보확인</span>
+                    </div>
+                    <div class="footer_copyright">Copyright ⓒ Universal Studio. All Rights Reserved.</div>
+                </div>
+            </div>
+            <div class="footer_content_right">
+                <div class="footer_sns instagram_icon">
+                    <i class="fa-brands fa-instagram" style="color: #fff;"></i>
+                </div>
+                <div class="footer_sns facebook_icon">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </div>
+                <div class="footer_sns youtube_icon">
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+                <div class="footer_sns twitter_icon">
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+    </script>
+
+
+</body>
+
+</html>

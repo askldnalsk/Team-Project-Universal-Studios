@@ -1,0 +1,637 @@
+html,
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Noto Sans KR';
+    font-size: 14px;
+    line-height: 23px;
+    color: #666;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table caption {
+    text-align: left;
+    display: none;
+}
+
+
+form,
+input,
+select,
+textarea,
+button {
+    font-family: 'Noto Sans KR';
+    font-size: 14px;
+    line-height: 23px;
+    color: #666;
+}
+
+button {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    outline-style: none;
+}
+
+input,
+select,
+textarea {
+    outline-style: none;
+    margin: 0;
+}
+
+img {
+    border: 0;
+}
+
+i,
+em,
+cite {
+    font-style: normal;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* layout ------------------------------------------------------------------------*/
+/* Top */
+
+/* Menu */
+
+/* 신규 스피드웨이 추가 */
+
+
+/* Content */
+#wrapCont {
+    position: relative;
+    min-width: 1250px;
+}
+
+#wrapCont .btnTop {
+    position: fixed;
+    z-index: 11;
+    bottom: 50px;
+    right: 50%;
+    width: 52px;
+    height: 52px;
+    background: url('/web/img/202003170001/btn_gotop.png') center center no-repeat;
+    margin-right: -600px;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+    display: none;
+    overflow: hidden;
+}
+
+#wrapCont .btnTop.stop {
+    position: absolute;
+    bottom: 50px;
+}
+
+
+/* Footer */
+
+/* gate --------------------------------------------------------------------- */
+
+
+/* common --------------------------------------------------------------------- */
+
+.wSpaceLine {
+    white-space: pre-line;
+}
+
+
+/* 신규 스피드웨이 추가 */
+
+/*paging */
+
+/* 달력 */
+
+/* 신규 스피드웨이 추가 */
+
+
+
+/* main ------------------------------------------------------------------------*/
+.mainVisual {
+    position: relative;
+    width: 100%;
+    min-height: 420px;
+    background: #fff;
+    margin-top: -1px;
+    font-size: 0;
+    line-height: 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.mainVisual img {
+    position: relative;
+    left: 50%;
+    margin-left: -100%;
+}
+
+
+/* 날짜선택 */
+
+/* 신규 스피드웨이 추가 */
+
+/* 추천상품 */
+.mainRecom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 39px;
+    
+}
+
+.mainRecom h3 {
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 55px;
+    color: #286BE1;
+    text-align: center;
+    display: block;
+    padding-bottom: 30px;
+}
+
+.mainRecom h3 small {
+    margin-bottom: -3px;
+    font-weight: 500;
+    display: block;
+    font-size: 25px;
+    color: #2f2f2f;
+}
+
+.mainRecom .word {
+    margin: 35px 100px 0 100px;
+    text-align: center;
+}
+
+.mainRecom .word a {
+    height: 31px;
+    border: solid 1px #e9e9e9;
+    border-radius: 100px;
+    padding: 0 20px;
+    margin: 10px 3px 0 4px;
+    line-height: 31px;
+    color: #777;
+    display: inline-block;
+}
+
+.mainRecom .word a.choice {
+    background: #000;
+    border-color: #000;
+    color: #fff;
+}
+
+.mainRecom .wordList {
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.mainRecom .wordList ul {
+    margin: 0 -16px 0 -15px;
+    font-size: 0;
+    text-align: center;
+}
+
+.mainRecom .wordList ul:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.mainRecom .wordList ul li {
+    position: relative;
+    width: 33.33%;
+    font-size: 14px;
+    text-align: left;
+    vertical-align: top;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.mainRecom .wordList ul li a {
+    margin: 0 15px;
+    display: block;
+}
+
+.mainRecom .wordList .txt {
+    padding: 50px 10px 0 10px;
+    font-size: 16px;
+    font-weight: 500;
+    
+    word-wrap: break-word;
+    word-break: keep-all;
+    display: block;
+    text-align: center;
+}
+
+.mainRecom .wordList .txt i {
+    font-weight: 300;
+    color: #666;
+}
+
+.mainRecom .wordList .txt strong {
+    margin: 21px 0 9px 0;
+    font-size: 22px;
+    font-weight: 600;
+    color: #2f2f2f !important;
+    line-height: 25px;
+    display: block;
+}
+
+.mainRecom .wordList .txt strong b {
+    font-weight: 500;
+}
+
+.mainRecom .wordList .thumb {
+    position: relative;
+    z-index: 1;
+    height: 350px;
+    border-radius: 10px;
+    font-size: 0;
+    line-height: 0;
+    text-align: center;
+    display: block;
+    overflow: hidden;
+}
+
+.mainRecom .wordList .thumb img {
+    position: relative;
+    left: 50%;
+    height: 100%;
+    margin-left: -100%;
+}
+.mainRecom .wordList .mario img{
+    height: 230px;
+    margin-top: 65px;
+}
+.mainRecom .wordList .bx-prev,
+.mainRecom .wordList .bx-next {
+    position: absolute;
+    top: 0;
+    width: 35px;
+    height: 10px;
+    background-image: url('/web/img/202003170001/mark_arrow_recom.png');
+    background-repeat: no-repeat;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+    display: block;
+    overflow: hidden;
+}
+
+.mainRecom .wordList .bx-prev {
+    right: 50%;
+    background-position: left 1px;
+}
+
+.mainRecom .wordList .bx-prev:hover {
+    background-position: left -14px;
+}
+
+.mainRecom .wordList .bx-next {
+    left: 50%;
+    background-position: right 1px;
+}
+
+.mainRecom .wordList .bx-next:hover {
+    background-position: right -14px;
+}
+
+.mainRecom .wordList .bx-pager {
+    display: inline-block;
+}
+
+.mainRecom .wordList .bx-pager-item {
+    padding: 0 5px;
+    display: inline-block;
+}
+
+.mainRecom .wordList .bx-pager-item a {
+    width: 9px;
+    height: 9px;
+    background: url('/web/img/202003170001/mark_paging.png') left 0 no-repeat;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+    display: block;
+    overflow: hidden;
+}
+
+.mainRecom .wordList .bx-pager-item a.active {
+    background-position: right 0;
+}
+
+.mainRecom .wordList .bx-wrapper {
+    margin-right: -30px;
+}
+
+.mainRecom .wordList .bx-wrapper ul {
+    text-align: left;
+}
+
+.mainRecom .wordList .bx-wrapper ul li {
+    margin: 0;
+    display: block;
+}
+
+.mainRecom .wordList .bx-controls {
+    position: relative;
+    margin: 45px 30px 5px 0;
+    font-size: 0;
+    line-height: 0;
+    text-align: center;
+}
+
+.mainRecom.el .txt {
+    color: #fe5730 !important;
+}
+
+.mainRecom.cb .txt {
+    color: #1b9bf0 !important;
+}
+
+.mainRecom.speed .txt {
+    color: #554fca !important;
+}
+
+/* 신규 스피드웨이 추가 */
+
+/* Q-PASS 추가 */
+
+/* 상품목록 */
+.mainList {
+    position: relative;
+    border-top: solid 1px #e9e9e9;
+    margin-top: 95px;
+    padding-bottom: 350px;
+    overflow: hidden;
+}
+
+.mainList:after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    bottom: -5px;
+    width: 653px;
+    height: 182px;
+    background: url('/web/img/202003170001/bg_main_el.png') right bottom no-repeat;
+    margin-left: -20px;
+    display: block;
+}
+
+.mainList h3 {
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 30px;
+    color: #000;
+    text-align: center;
+}
+
+.mainList .tab {
+    width: 1200px;
+    height: 60px;
+    border: solid 1px #e9e9e9;
+    margin: -1px auto 0 auto;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.mainList .tab li {
+    line-height: 58px;
+    display: inline-block;
+}
+
+.mainList .tab li a {
+    height: 58px;
+    padding: 0 12px;
+    font-size: 15px;
+    color: #777;
+    display: block;
+    box-sizing: border-box;
+}
+
+.mainList .tab li.on a {
+    border-bottom: solid 6px #000;
+    color: #000;
+}
+
+.mainList .intro {
+    margin-top: 23px;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+}
+
+.mainList .listBox {
+    width: 1200px;
+    margin: 114px auto 0 auto;
+}
+
+.mainList .listBox ul {
+    border: solid 1px #e9e9e9;
+    margin-top: 46px;
+    overflow: hidden;
+}
+
+.mainList .listBox ul li {
+    position: relative;
+    float: left;
+    width: 50%;
+    border-left: solid 1px #e9e9e9;
+    margin: -1px 0 0 -1px;
+}
+
+.mainList .listBox ul li a {
+    padding: 48px 50px 48px 40px;
+    display: block;
+    overflow: hidden;
+}
+
+.mainList .listBox ul li a:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.mainList .listBox ul li+li a {
+    border-right: solid 1px #e9e9e9;
+}
+
+.mainList .listBox ul li:nth-child(odd) {
+    clear: both;
+}
+
+.mainList .listBox ul li:nth-child(odd):before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    border-top: solid 1px #e9e9e9;
+    display: block;
+}
+
+.mainList .listBox ul li:nth-child(even) a {
+    border-right: 0;
+}
+
+.mainList .listBox ul li:nth-child(even):before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -1px;
+    height: 200%;
+    border-left: solid 1px #e9e9e9;
+}
+
+.mainList .listBox ul:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.mainList .listBox .tit {
+    margin-top: -4px;
+    color: #666;
+    word-wrap: break-word;
+    word-break: keep-all;
+    display: block;
+}
+
+.mainList .listBox .tit i {
+    font-size: 13px;
+}
+
+.mainList .listBox .tit strong {
+    margin: 16px 0 13px 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+    letter-spacing: -0.5px;
+    display: block;
+}
+
+.mainList .listBox .thumb {
+    position: relative;
+    float: left;
+    width: 144px;
+    height: 144px;
+    background: #f7f7f7;
+    border-radius: 150px;
+    margin-right: 38px;
+    text-align: center;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+}
+
+.mainList .listBox .thumb img {
+    position: relative;
+    left: 50%;
+    height: 100%;
+    margin-left: -100%;
+}
+
+.mainList .listBox .nodata {
+    float: none;
+    width: 100%;
+    background: #fff;
+    padding: 47px 0;
+    font-size: 16px;
+    color: #999;
+    text-align: center;
+    clear: both;
+}
+
+.mainList.el .tit i {
+    color: #fe5730;
+}
+
+.mainList.el .tab li.on a {
+    border-color: #fe5730;
+    color: #fe5730;
+}
+
+.mainList.cb .tit i {
+    color: #1b9bf0;
+}
+
+.mainList.cb .tab li.on a {
+    border-color: #1b9bf0;
+    color: #1b9bf0;
+}
+
+/* 신규 스피드웨이 추가 */
+.mainList.speed .tit i {
+    color: #554fca;
+}
+
+.mainList.speed .tab li.on a {
+    border-color: #554fca;
+    color: #554fca;
+}
+
+.mainList.ym {
+    border-top: 0;
+    margin-top: 0;
+}
+
+.mainList.ym .tit i {
+    color: #9855cd;
+}
+
+@media screen and (max-width:1250px) {
+    #wrapCont .btnTop {
+        right: 25px;
+        margin-right: 0;
+    }
+}
+
+.choi_1{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.choi_1 .choi_2{
+    background-color: none;
+    border: 2px solid #286be1;
+    color: #286BE1;
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    border-radius: 100px;
+    width: 230px;
+    height: 55px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0 100px;
+}

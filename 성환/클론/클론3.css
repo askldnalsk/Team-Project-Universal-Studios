@@ -1,0 +1,269 @@
+@charset "utf-8";
+
+/*
+ * File       : jt-strap.css
+ * Author     : STUDIO-JT (KMS)
+ * Guideline  : JTstyle.2.0
+ *
+ * Dependency : css/reset.css
+ *
+ * SUMMARY:
+ * 01) BUTTON
+ * 02) A11Y
+ * 03) SWIPER
+ * 04) LAZYLOAD
+ */
+
+
+
+/* **************************************** *
+ * BUTTON
+ * **************************************** */
+/* Basic Button */
+.jt-btn__basic {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    line-height: 1;
+    text-align: center;
+    padding: 16rem 34rem;
+    font-size: 16rem;
+    font-weight: 400;
+    letter-spacing: var(--letter-spacing);
+    color: #222;
+    border: 1rem solid #ddd;
+    background: #fff;
+    -webkit-transition: all 300ms;
+    transition: all 300ms;
+}
+
+.jt-btn__basic.jt-btn--small {
+    padding: 13rem 22rem;
+}
+
+.jt-btn__basic.jt-btn--large {
+    padding: 19rem 44rem;
+}
+
+html.desktop .jt-btn__basic.jt-btn--type-01:hover {
+    background: #f4f5f6;
+}
+
+.jt-btn__basic.jt-btn--type-02 {
+    border-color: #222;
+}
+
+html.desktop .jt-btn__basic.jt-btn--type-02:hover {
+    color: #fff;
+    background: #222;
+}
+
+.jt-btn__basic.jt-btn--type-03 {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+html.desktop .jt-btn__basic.jt-btn--type-03:hover {
+    color: #fff;
+    background: var(--color-primary);
+}
+
+html.ios .jt-btn__basic {
+    padding-top: 17rem;
+    padding-bottom: 15rem;
+}
+
+html.ios .jt-btn__basic.jt-btn--small {
+    padding-top: 14rem;
+    padding-bottom: 12rem;
+}
+
+html.ios .jt-btn__basic.jt-btn--large {
+    padding-top: 20rem;
+    padding-bottom: 18rem;
+}
+
+
+
+/* **************************************** *
+ * A11Y
+ * **************************************** */
+.sr-only {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
+    clip-path: inset(0px 0px 99.9% 99.9%);
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    border: 0;
+}
+
+#skip a {
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    left: -10000rem;
+    top: auto;
+    overflow: hidden;
+}
+
+#skip a:focus {
+    display: block;
+    width: 100%;
+    height: 40rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    line-height: 40rem;
+    text-align: center;
+    color: #fff;
+    background: #444;
+    z-index: 999;
+}
+
+.use-mouse,
+.use-mouse select,
+.use-mouse input[type=text],
+.use-mouse input[type=tel],
+.use-mouse input[type=email],
+.use-mouse input[type=password],
+.use-mouse input[type=url],
+.use-mouse input[type=number],
+.use-mouse input[type=search],
+.use-mouse textarea,
+.use-mouse input[type=submit],
+.use-mouse input[type=button],
+.use-mouse button,
+.use-mouse a:focus {
+    outline: none;
+}
+
+
+
+/* **************************************** *
+ * SWIPER
+ * **************************************** */
+.swiper-pagination {
+    display: inline-block;
+    position: relative;
+}
+
+.swiper-pagination-bullet {
+    display: block;
+    width: 44rem;
+    height: 44rem;
+    position: relative;
+    background: transparent;
+    opacity: 1;
+    margin: 6rem 0;
+    padding: 2rem 20rem;
+}
+
+.swiper-pagination-bullet i {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    font-size: 0;
+    border: 0;
+    border-radius: 100rem;
+    background: rgba(255, 255, 255, .5);
+    transform: translate3d(-50%, -50%, 0);
+    transition: background 200ms;
+}
+
+.swiper-pagination-bullet-active>i {
+    background: #fff;
+}
+
+.use-mouse .swiper-control .swiper-pagination-bullet {
+    outline: none;
+}
+
+html.mobile .swiper-control .swiper-pagination-bullet {
+    outline: none;
+}
+
+.swiper-control {
+    /* opacity:0; */
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+}
+
+.swiper-container-horizontal .swiper-control {
+    opacity: 1;
+}
+
+.swiper-control__inner {
+    display: inline-block;
+    position: relative;
+}
+
+/* progress */
+.swiper-progress-wrap {
+    display: block;
+    width: 111rem;
+    height: 2rem;
+    position: absolute;
+    left: 33rem;
+    top: 50%;
+    margin-top: -1rem;
+    background: #fff;
+    overflow: hidden;
+}
+
+.swiper-progress {
+    display: block;
+    width: 0;
+    height: 100%;
+    background: #040404;
+}
+
+
+
+/* **************************************** *
+ * LAZYLOAD
+ * **************************************** */
+img[data-unveil] {
+    opacity: 0;
+    -webkit-transition: opacity .3s;
+    transition: opacity .3s;
+}
+
+img[data-unveil].jt-lazyload--loaded {
+    opacity: 1
+}
+
+.jt-lazyload {
+    position: relative;
+    overflow: hidden;
+}
+
+.jt-lazyload img {
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.jt-lazyload img.jt-lazyload--loaded {
+    height: auto;
+}
+
+/* Color preview */
+.jt-lazyload__color-preview {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #f5f5f5;
+    opacity: 1;
+}
