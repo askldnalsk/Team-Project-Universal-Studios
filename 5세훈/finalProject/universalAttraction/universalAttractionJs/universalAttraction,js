@@ -1,4 +1,5 @@
-'use strict'
+'use strict';
+window.onload = () =>{
 
 
 const $lookNum = document.querySelector('.lookNum')
@@ -549,7 +550,7 @@ express.addEventListener('click',e=>{
         location.reload();
     })
 
-  
+}
 
 
 
